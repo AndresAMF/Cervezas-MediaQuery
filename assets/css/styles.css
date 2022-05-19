@@ -1,0 +1,311 @@
+body,
+h3,
+ul,
+p,
+li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.headerContainer {
+    grid-area: nav;
+}
+
+.searchContainer {
+    grid-area: section;
+}
+
+.mainContainer {
+    grid-area: main;
+}
+
+.footerContainer {
+    grid-area: footer;
+}
+
+.pagesContainer {
+    grid-area: pages;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav"
+        "section"
+        "main"
+        "pages"
+        "footer";
+}
+
+
+/*Se declara la fuente que se usará en el total de los elementos*/
+
+* {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+/*Comienzan estilos header y barra de busqueda*/
+
+.headerContainer {
+    background-color: #efc234;
+    width: auto;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+}
+
+.headerContainer i {
+    padding-right: 1rem;
+}
+
+.headerTitle {
+    display: flex;
+    flex-direction: row;
+    padding-left: 1rem;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.headerTitle .material-icons {
+    font-size: 48px;
+}
+
+.headerContainer img {
+    display: none;
+}
+
+.headerUl {
+    display: none;
+}
+
+
+
+.searchContainer {
+    height: 4rem;
+    background-color: #e8ce79;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.searchContainer select {
+    height: 2rem;
+    width: 80%;
+}
+
+/*Finalizan estilos header y barra de busqueda*/
+
+
+
+
+/*Comienzan estilos sección main*/
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: auto;
+    height: auto;
+    justify-items: center;
+    background-color: rgb(244, 244, 244);
+    padding-bottom: 1rem;
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px rgb(129, 129, 129);
+    width: 20rem;
+    margin-top: 1rem;
+    text-align: justify;
+    padding: 0rem 1rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.productContainer h3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.imgContainer {
+    height: 20rem;
+    width: 10rem;
+}
+
+.imgContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 0.5rem 0rem;
+}
+
+button {
+    margin: 1rem 0rem;
+    background-color: #efc234;
+    width: 10rem;
+    height: auto;
+}
+button:hover{
+    background-color: #e8ce79;
+}
+
+/*Finalizan estilos sección main*/
+
+
+
+
+/*Comienzan estilos paginador*/
+
+.pagesContainer {
+    background-image: url("../imgs/lupulos.webp");
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageItem {
+    border: solid 1px gray;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    width: auto;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    background-color: #efc234;
+    opacity: 80%;
+
+}
+
+.pageItem:hover {
+    background-color: #e8ce79;
+
+}
+
+.pageLink {
+    text-decoration: none;
+    color: black;
+}
+
+/*Finalizan estilos paginador*/
+
+
+
+
+/*Comienzan estilos sección footer*/
+
+.footerContainer {
+    background-color: #efb800;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Finalizan estilos sección footer*/
+
+
+/*Comienza media query para pantalla notebook*/
+
+
+@media(min-width:576px) {
+
+    .gridContainer {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 85%;
+        grid-template-areas:
+            "nav section"
+            "nav main"
+            "nav main"
+            "footer pages";
+    }
+
+    .headerContainer {
+        flex-direction: column;
+        height: auto;
+        padding-top: 1rem;
+        align-items: center;
+        justify-content: start;
+        color: black;
+    }
+
+    .headerTitle {
+        padding: 0rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+    }
+
+    .headerContainer img {
+        height: 30%;
+        width: 90%;
+        padding-top: 6rem;
+        display: unset;
+    }
+
+    .headerContainer #burger {
+        display: none;
+    }
+
+    .headerUl {
+        padding: 1rem 0rem;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .headerItem {
+        padding: 0.5rem 0rem;
+       
+    }
+
+    .headerLink:hover{
+        background-color: black;
+        color: #efc234;
+    }
+
+    .headerLink {
+        text-decoration: none;
+        color: black; 
+        
+    }
+
+    .mainContainer {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: auto;
+        justify-items: center;
+        grid-auto-rows: 30rem;
+        overflow-y: auto;
+        overflow-x: none;
+    }
+
+    .pagesContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footerContainer {
+        height: 7rem;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .searchContainer select {
+        height: 2rem;
+        width: 95%;
+    }
+
+}
