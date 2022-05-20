@@ -55,7 +55,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 5rem;
+    height: 3rem;
     align-items: center;
 }
 
@@ -68,7 +68,7 @@ li {
     flex-direction: row;
     padding-left: 1rem;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .headerTitle .material-icons {
@@ -121,7 +121,7 @@ li {
     background-color: #e8ce79;
     text-align: center;
     padding-top: 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .searchContainer select {
@@ -143,7 +143,9 @@ li {
     height: auto;
     justify-items: center;
     background-color: rgb(244, 244, 244);
-    padding-bottom: 1rem;
+    padding: 0.5rem 0.5rem;
+    row-gap: 10px;
+    column-gap: 10px;
 }
 
 .productContainer {
@@ -152,9 +154,9 @@ li {
     align-items: center;
     border: solid 1px rgb(129, 129, 129);
     width: 20rem;
-    margin-top: 1rem;
+    
     text-align: justify;
-    padding: 0rem 1rem;
+    padding: 0rem 0.75rem;
     background-color: rgb(255, 255, 255);
 }
 
@@ -251,7 +253,7 @@ button:hover {
     .gridContainer {
         display: grid;
         height: 100vh;
-        grid-template-columns: 1fr 85%;
+        grid-template-columns: 1fr 83%;
         grid-template-areas:
             "nav section"
             "nav main"
